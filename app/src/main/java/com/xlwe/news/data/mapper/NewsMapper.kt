@@ -1,6 +1,5 @@
 package com.xlwe.news.data.mapper
 
-import android.util.Log
 import com.xlwe.news.data.database.NewsItemDbModel
 import com.xlwe.news.data.network.model.ArticleDTO
 import com.xlwe.news.domain.model.Article

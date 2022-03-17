@@ -1,18 +1,15 @@
 package com.xlwe.news.presentation.fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import com.xlwe.news.R
 import com.xlwe.news.databinding.FragmentHomeBinding
 import com.xlwe.news.domain.NetworkResult
 import com.xlwe.news.domain.model.Article
-import com.xlwe.news.log
 import com.xlwe.news.presentation.NewsAdapter
 import com.xlwe.news.presentation.OnClick
 import com.xlwe.news.presentation.viewmodels.MainViewModel

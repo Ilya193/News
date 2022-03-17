@@ -1,14 +1,13 @@
 package com.xlwe.news.presentation.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.xlwe.news.databinding.FragmentDetailBinding
-import com.xlwe.news.log
 import com.xlwe.news.presentation.viewmodels.MainViewModel
 
 class DetailFragment : Fragment() {

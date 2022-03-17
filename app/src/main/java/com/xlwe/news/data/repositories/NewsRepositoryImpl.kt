@@ -1,6 +1,5 @@
 package com.xlwe.news.data.repositories
 
-import android.util.Log
 import com.xlwe.news.data.database.NewsListDao
 import com.xlwe.news.data.mapper.NewsMapper
 import com.xlwe.news.data.network.ApiRequests
@@ -10,13 +9,11 @@ import com.xlwe.news.data.network.model.SourceDTO
 import com.xlwe.news.domain.NetworkResult
 import com.xlwe.news.domain.model.Article
 import com.xlwe.news.domain.repositories.NewsRepository
-import com.xlwe.news.log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
-import kotlin.math.atan
 
 class NewsRepositoryImpl @Inject constructor(
     private val apiRequests: ApiRequests,
