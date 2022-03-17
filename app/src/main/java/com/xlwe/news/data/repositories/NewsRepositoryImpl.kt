@@ -54,26 +54,24 @@ class NewsRepositoryImpl @Inject constructor(
     }
 
     override fun getNews(): Flow<NetworkResult> = flow {
-        //emit(NetworkResult.Loading())
-        val newsNvidia = /*GENERATE("nvidia")*/ apiRequests.getNews("nvidia", "885f7b7d16ed4472a7944e421215fa82")
+        val newsNvidia = apiRequests.getNews("nvidia", "885f7b7d16ed4472a7944e421215fa82")
         val listEntity = mapper.mapNetworkModelToEntity(newsNvidia.articles).toMutableList()
 
-        /*val newsAmd = GENERATE("amd") *//*apiRequests.getNews("amd", "885f7b7d16ed4472a7944e421215fa82")*//*
+        val newsAmd = apiRequests.getNews("amd", "885f7b7d16ed4472a7944e421215fa82")
             mapper.mapNetworkModelToEntity(newsAmd.articles).forEach {
                 listEntity.add(it)
             }
 
-        val newsApple = GENERATE("apple") *//*apiRequests.getNews("apple", "885f7b7d16ed4472a7944e421215fa82")*//*
+        val newsApple = apiRequests.getNews("apple", "885f7b7d16ed4472a7944e421215fa82")
             mapper.mapNetworkModelToEntity(newsApple.articles).forEach {
                 listEntity.add(it)
-            }*/
+            }
 
         emit(NetworkResult.Success(listEntity))
     }.flowOn(Dispatchers.IO)
 
     override fun getNewsFromDatabase(): Flow<NetworkResult> = flow {
         newsListDao.getNews().collect {
-            //Log.d("attadag", "COLLECT2 ${it}")
             emit(NetworkResult.Success(mapper.mapDbModelToEntity(it)))
         }
     }
