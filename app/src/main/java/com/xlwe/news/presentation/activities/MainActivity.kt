@@ -1,9 +1,8 @@
 package com.xlwe.news.presentation.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.xlwe.news.R
 import com.xlwe.news.databinding.ActivityMainBinding
 import com.xlwe.news.domain.model.Article
@@ -50,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.favorite -> {
-                    //mainViewModel.updateFromActivity(saveNews)
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainer, FavoriteFragment.newInstance())
                         .commit()
