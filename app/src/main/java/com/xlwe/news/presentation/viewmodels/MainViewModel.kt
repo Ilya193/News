@@ -1,14 +1,15 @@
 package com.xlwe.news.presentation.viewmodels
 
-import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.xlwe.news.domain.NetworkResult
 import com.xlwe.news.domain.model.Article
 import com.xlwe.news.domain.usecases.DeleteNewsUseCase
 import com.xlwe.news.domain.usecases.GetNewsFromDatabaseUseCase
 import com.xlwe.news.domain.usecases.GetNewsUseCase
 import com.xlwe.news.domain.usecases.InsertUseCase
-import com.xlwe.news.log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -71,14 +72,6 @@ class MainViewModel @Inject constructor(
 
     fun saveArticle(article: Article) {
         _saveArticle.value = article
-    }
-
-    fun updateFromFragment(mainList: List<Article>) {
-        _transitionNews.value = mainList
-    }
-
-    fun updateList(mainList: List<Article>) {
-        _news.value = NetworkResult.Success(mainList.toList())
     }
 
 }

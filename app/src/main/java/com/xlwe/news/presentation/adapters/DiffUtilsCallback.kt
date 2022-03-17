@@ -1,8 +1,7 @@
-package com.xlwe.news.presentation
+package com.xlwe.news.presentation.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.xlwe.news.domain.model.Article
-import com.xlwe.news.log
 
 class DiffUtilsCallback(
     private val oldList: List<Article>,

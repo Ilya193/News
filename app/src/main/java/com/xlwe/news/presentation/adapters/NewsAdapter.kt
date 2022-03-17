@@ -1,4 +1,4 @@
-package com.xlwe.news.presentation
+package com.xlwe.news.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ import com.xlwe.news.R
 import com.xlwe.news.databinding.NewsItemCommonBinding
 import com.xlwe.news.databinding.NewsItemFavoriteBinding
 import com.xlwe.news.domain.model.Article
-import com.xlwe.news.log
+import com.xlwe.news.presentation.OnClick
 
 class NewsAdapter(
     private var news: List<Article>,
