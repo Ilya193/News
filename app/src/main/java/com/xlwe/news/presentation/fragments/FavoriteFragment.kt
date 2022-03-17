@@ -49,11 +49,7 @@ class FavoriteFragment : Fragment(), OnClick {
                         mainListNews.add(article)
                     }
 
-                    //log("FAVORITE $mainListNews")
-
                     newsAdapter.submitList(mainListNews.toList())
-
-                    /*newsAdapter.submitList(mainListNews.toList())*/
                 }
             }
         }
