@@ -22,7 +22,7 @@ class NewsRepositoryImpl @Inject constructor(
 
     private val mapper = NewsMapper()
 
-    private fun GENERATE(name: String): NewsDTO {
+    /*private fun GENERATE(name: String): NewsDTO {
         val networkList = mutableListOf<ArticleDTO>()
 
         for (i in 0..19) {
@@ -48,7 +48,7 @@ class NewsRepositoryImpl @Inject constructor(
             totalResults = 1,
             articles = networkList
         )
-    }
+    }*/
 
     override fun getNews(): Flow<NetworkResult> = flow {
         val newsNvidia = apiRequests.getNews("nvidia", "885f7b7d16ed4472a7944e421215fa82")
